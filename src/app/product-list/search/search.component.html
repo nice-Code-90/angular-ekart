@@ -1,0 +1,12 @@
+<div class="ekart--search--product">
+  <input
+    type="text"
+    class="ekart-search-product-input"
+    [(ngModel)]="searchText"
+  />
+  <!--Property binding and event bingind at the same time= 2 way data binding-->
+  <button class="btn btn-search">Seach</button>
+</div>
+<div class="ekart-search-result-for">
+  <p><strong> Search result for: </strong>{{ searchText }}</p>
+</div>
