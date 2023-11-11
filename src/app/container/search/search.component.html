@@ -5,7 +5,16 @@
     [(ngModel)]="searchText"
   />
   <!--Property binding and event bingind at the same time= 2 way data binding-->
-  <button class="btn btn-search">Seach</button>
+  <button
+    [ngClass]="{
+      btn: true,
+      'btn-search': searchText,
+      'btn-search-disabled': !searchText
+    }"
+    [disabled]="!searchText"
+  >
+    Seach
+  </button>
 </div>
 <div class="ekart-search-result-for">
   <p *ngIf="searchText != ''">
