@@ -17,11 +17,6 @@
   border: #efefef 2px solid;
   position: relative;
 }
-.i {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 .ekart-wishlist-sale-container {
   display: flex;

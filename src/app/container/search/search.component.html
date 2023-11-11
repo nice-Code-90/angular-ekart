@@ -8,5 +8,7 @@
   <button class="btn btn-search">Seach</button>
 </div>
 <div class="ekart-search-result-for">
-  <p><strong> Search result for: </strong>{{ searchText }}</p>
+  <p *ngIf="searchText != ''">
+    <strong> Search result for: </strong>{{ searchText }}
+  </p>
 </div>
