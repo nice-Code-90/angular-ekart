@@ -1,3 +1,8 @@
+<app-filter
+  [all]="totalProductCount"
+  [inStock]="totalProductInStock"
+  [outOfStock]="totalProductOutOfStock"
+></app-filter>
 <div class="ekart--product--container">
   <app-product *ngFor="let prod of products" [product]="prod"></app-product>
   <!--Custom property binding: we use the product property of 'product' as an HTML attribute 
