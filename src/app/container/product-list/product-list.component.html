@@ -2,9 +2,16 @@
   [all]="totalProductCount"
   [inStock]="totalProductInStock"
   [outOfStock]="totalProductOutOfStock"
+  (selectedFilterRadioButtonChanged)="onFilterChanged($event)"
 ></app-filter>
-<div class="ekart--product--container">
-  <app-product *ngFor="let prod of products" [product]="prod"></app-product>
-  <!--Custom property binding: we use the product property of 'product' as an HTML attribute 
-  we are binding the property of child component here -->
+<div class="ekart--products--container">
+  <div *ngFor="let prod of products">
+    <app-product
+      [product]="prod"
+      *ngIf="
+        selectedFilterRadioButton === 'all' ||
+        prod.is_in_inventory.toString() === selectedFilterRadioButton
+      "
+    ></app-product>
+  </div>
 </div>
