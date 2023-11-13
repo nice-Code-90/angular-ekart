@@ -1,19 +1,7 @@
 <div class="ekart--search--product">
-  <input
-    type="text"
-    class="ekart-search-product-input"
-    [(ngModel)]="searchText"
-    (input)="onSearchTextChanged()"
-  />
+  <input type="text" class="ekart-search-product-input" #searchInput />
   <!--Property binding and event bingind at the same time= 2 way data binding-->
-  <button
-    [ngClass]="{
-      btn: true,
-      'btn-search': searchText,
-      'btn-search-disabled': !searchText
-    }"
-    [disabled]="!searchText"
-  >
+  <button class="btn btn-search" (click)="updateSearchText(searchInput)">
     Seach
   </button>
 </div>
