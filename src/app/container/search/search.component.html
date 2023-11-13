@@ -3,6 +3,7 @@
     type="text"
     class="ekart-search-product-input"
     [(ngModel)]="searchText"
+    (input)="onSearchTextChanged()"
   />
   <!--Property binding and event bingind at the same time= 2 way data binding-->
   <button
